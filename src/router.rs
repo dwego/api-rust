@@ -1,9 +1,9 @@
 use axum::{Router, routing::get};
-use crate::handlers;
+use crate::handlers::foo;
 
 pub fn create_router() -> Router {
     Router::new()
-        .route("/foo", get(handlers::get).post(handlers::post))
-        .route("/foo/bar", get(handlers::bar))
+        .route("/foo", get(foo::get).post(foo::post))
+        .route("/foo/bar", get(foo::bar))
 }
 
