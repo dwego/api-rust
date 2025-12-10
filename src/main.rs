@@ -1,4 +1,4 @@
-mod router;
+pub mod router;
 mod handlers;
 
 use router::create_router;
